@@ -17,7 +17,7 @@ body {
 
 /* Styles */
 h2, input[name="title"], textarea {
-  font-family: 'IBM Plex Mono'
+  font-family: 'IBM Plex Mono';
 }
 
 p.instructions {
@@ -32,6 +32,7 @@ p.instructions {
   border: 1px dashed grey;
   margin: 0.5em 0;
   box-sizing: border-box;
+  padding-left: 1px
 }
 
 .note-editor textarea {
@@ -43,11 +44,11 @@ p.instructions {
 
 .nav-bar {
   width: 100%;
-  background-image: linear-gradient(to right top, #8C33E3, #696CE8, #4A9EEC);
+  background-image: linear-gradient(135deg, orange, orange 60%, cyan);
   background-repeat: no-repeat;
   font-family: 'IBM Plex Mono';
-  font-size: 16px;
-  letter-spacing: 1.5px;
+  font-size: 36px;
+  letter-spacing: 20px;
   font-weight: bolder;
   display: flex;
   flex-direction: row;
@@ -67,7 +68,7 @@ p.instructions {
   flex-direction: row;
   justify-content: center;
   align-items: center;
-  border: 2px dashed grey;
+  border: 2px dotted grey;
 }
 
 input {
@@ -75,20 +76,27 @@ input {
   height: 40px;
   width: 100%;
   border: none;
+  /* padding-bottom: 1em;
+  padding-left: 10px;
+  border: 1px dashed grey;
+  margin: 0.5em 0;
+  box-sizing: border-box; */
 }
 
 input::placeholder {
-  padding-left: 10px;
+  padding-left: 0px;
   color: rgba(0, 0, 0, 0.55);
   font-weight: bolder;
 }
 
 div.sidebar button {
   width: 100%;
+  margin: 1px;
+  background-image: linear-gradient(135deg, orange, orange 60%, cyan)
 }
 
 div.sidebar ul {
-  margin: 0 0 20px 0;
+  margin: 5px 0 20px 0;
   padding: 0;
   display: flex;
   flex-direction: column;
@@ -97,7 +105,7 @@ div.sidebar ul {
 div.sidebar ul li {
   list-style: none;
   border-bottom: 1px solid grey;
-  padding: 0 5px;
+  padding: 0 2px;
 }
 
 div.sidebar ul li:first-child {
@@ -106,7 +114,7 @@ div.sidebar ul li:first-child {
 
 div.sidebar ul li:hover {
   /* background-color: yellow; */
-  background-image: linear-gradient(#E6E6E6, #F7F7F7);
+  background-image: linear-gradient(#FFE5CC, #F7F7F7);
   background-repeat: no-repeat;
 }
 
@@ -130,17 +138,17 @@ div.sidebar ul li:hover {
 .master-detail-element {
   float:left;
   margin: 10px 0px;
-  padding: 20px;
-  border: 2px dashed grey;
+  padding: 8px 20px 0px 20px;
+  border: 2px dotted grey;
 }
 
 .sidebar {
-  width:25%;
-  overflow: scroll;
+  width:20%;
+  /* overflow: scroll; */
 }
 
 .detail {
-  width:75%;
+  width:80%;
 }
 
 .note-editor {
@@ -158,6 +166,7 @@ div.sidebar ul li:hover {
 }
 
 
+
 /* Button Style */
 input[type="submit"] {
   height: auto;
@@ -170,7 +179,7 @@ button, input[type="submit"] {
   margin-right: 10px;
   padding: 5px 35px;
   border: 0px;
-  background-image: linear-gradient(to right top, #8C33E3, #696CE8, #4A9EEC);
+  background-image: linear-gradient(135deg, orange, orange 60%, cyan);
   background-repeat: no-repeat;
   color: white;
   font-size: 14px;
@@ -178,10 +187,48 @@ button, input[type="submit"] {
 }
 
 button:hover, .nav-bar:hover, input[type="submit"]:hover {
-  background-image: linear-gradient(to right top, #8A2387, #E94057, #F27121);
+  background-image: linear-gradient(to right top, cyan, pink 40%, coral);
   background-repeat: no-repeat;
 }
 
 button:focus, input[type="submit"]:focus {
   outline: none;
+}
+
+.new {
+  margin: 8px 0px 12px 0px !important;
+  /* background-image: linear-gradient(135deg, orange, orange 25%, cyan) */
+}
+
+/* .sortByTime {
+  background-image: linear-gradient(135deg, orange, orange 43%, cyan)
+}
+
+.sortByName {
+  background-image: linear-gradient(135deg, orange, orange 53%, cyan)
+} */
+
+.sortByUpdate {
+  margin: 0px 0px 12px 0px !important;
+  /* background-image: linear-gradient(135deg, orange, orange 62%, cyan) */
+}
+
+button:hover, .new:hover, input[type="new"]:hover {
+  background-image: linear-gradient(to right top, cyan, pink 40%, coral);
+  background-repeat: no-repeat;
+}
+
+button:hover, .sortByTime:hover, input[type="sortByTime"]:hover {
+  background-image: linear-gradient(to right top, cyan, pink 60%, coral);
+  background-repeat: no-repeat;
+}
+
+button:hover, .sortByName:hover, input[type="sortByName"]:hover {
+  background-image: linear-gradient(to right top, cyan, pink 80%, coral);
+  background-repeat: no-repeat;
+}
+
+button:hover, .sortByUpdate:hover, input[type="sortByUpdate"]:hover {
+  background-image: linear-gradient(to right top, cyan, pink 100%, coral);
+  background-repeat: no-repeat;
 }
